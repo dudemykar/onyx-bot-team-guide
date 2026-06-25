@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Onyx Bot — Team Member Guide</title>
+<style>
+  :root{
+    --bg:#080b11; --panel:#121826; --panel2:#0d121c; --border:#212c3e; --border2:#2b3950;
+    --text:#e9eef7; --muted:#8a98ad; --mono:#a9b8cd; --chipbg:#0a0f18;
+    --blue:#4aa3ff; --gold:#f2c14e; --purple:#b58cff; --green:#52d39a; --teal:#39d3c3;
+    --red:#ff6b6b; --orange:#ff9f45; --pink:#ff7eb6; --cyan:#46c8ff; --indigo:#8a8cff;
+    --lime:#9ad94e; --sky:#363838; --violet:#c08bff; --amber:#ffbf47;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:radial-gradient(1300px 640px at 82% -8%,#143427 0%,var(--bg) 52%);
+       color:var(--text);font-family:'Inter',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+       -webkit-font-smoothing:antialiased;padding-bottom:60px}
+  .wrap{max-width:920px;margin:0 auto;padding:0 22px}
+  code,.mono{font-family:'SF Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  header{padding:34px 0 6px}
+  .hero{display:flex;align-items:center;gap:16px}
+  .logo{width:60px;height:60px;border-radius:17px;flex:0 0 auto;
+        background:linear-gradient(135deg,#52d39a,#f2c14e 60%,#4aa3ff);
+        display:flex;align-items:center;justify-content:center;font-size:31px;
+        box-shadow:0 10px 34px rgba(82,211,154,.28)}
+  h1{font-size:31px;margin:0;letter-spacing:.2px}
+  .sub{color:var(--muted);font-size:14.5px;margin-top:4px}
+  .bar{position:sticky;top:0;z-index:20;background:rgba(8,11,17,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);margin-top:18px}
+  .barin{max-width:920px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .nav{display:flex;gap:7px;flex-wrap:wrap;flex:1}
+  .nav a{color:var(--muted);font-size:12.5px;text-decoration:none;border:1px solid var(--border);padding:5px 11px;border-radius:999px;white-space:nowrap}
+  .nav a:hover{color:var(--text);border-color:var(--border2)}
+  .search{display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:8px 12px;color:var(--muted);min-width:200px}
+  .search input{all:unset;flex:1;color:var(--text);font-size:14px}
+  section{padding-top:30px}
+  .lbl{font-size:12px;letter-spacing:1.8px;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0 2px 14px}
+  .lbl b{color:var(--text)}
+  .intro{color:var(--muted);font-size:13.5px;line-height:1.6;margin:-6px 2px 14px}
+  .stack{display:flex;flex-direction:column;gap:12px}
+  .feat{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--border);border-radius:13px;padding:15px 16px;border-left:3px solid var(--c,#52d39a)}
+  .feat h3{margin:0;font-size:15.5px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .badge{font-size:10px;font-weight:700;letter-spacing:.4px;border-radius:6px;padding:2px 8px;border:1px solid;margin-left:auto;color:var(--green);border-color:#1f5b43;background:#0c1b15}
+  .feat dl{display:grid;grid-template-columns:94px 1fr;gap:7px 12px;margin:11px 0 0}
+  .feat dt{color:var(--muted);font-size:10px;letter-spacing:.6px;text-transform:uppercase;padding-top:3px}
+  .feat dd{margin:0;font-size:13px;color:var(--text);line-height:1.5}
+  .feat dd code{font-family:'SF Mono',ui-monospace,monospace;font-size:12px;color:var(--gold);background:var(--chipbg);border:1px solid var(--border);border-radius:6px;padding:2px 7px}
+  .feat dd.ex{font-family:'SF Mono',ui-monospace,monospace;font-size:12px;color:var(--mono);background:var(--chipbg);border:1px solid var(--border);border-radius:7px;padding:8px 10px}
+  .nores{padding:14px;color:var(--muted);font-size:13px;display:none}
+  .foot{color:var(--muted);font-size:12px;text-align:center;margin-top:34px;border-top:1px solid var(--border);padding-top:18px}
+  @media(max-width:680px){.feat dl{grid-template-columns:1fr}.feat dt{padding-top:8px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="hero">
+      <div class="logo">🎮</div>
+      <div>
+        <h1>Onyx Bot — Team Member Guide</h1>
+        <div class="sub">Everything you can do as a member — your commands, XP, Saga Points, events, and rankings. All in one place.</div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<div class="bar"><div class="barin">
+  <nav class="nav">
+    <a href="#start">Quick start</a>
+    <a href="#cmds">Your commands</a>
+    <a href="#xp">XP &amp; levels</a>
+    <a href="#saga">Saga Points</a>
+    <a href="#events">Events &amp; RSVP</a>
+    <a href="#boards">Leaderboards</a>
+    <a href="#chill">Chill zone</a>
+  </nav>
+  <div class="search">🔍 <input id="q" placeholder="Search your features…"></div>
+</div></div>
+
+<div class="wrap" id="root">
+
+  <section id="start">
+    <div class="lbl">👋 <b>Quick start</b></div>
+    <p class="intro">Onyx Bot rewards you for showing up. Just by chatting, reacting, and RSVPing to events you earn <b>XP</b> and climb the levels. Standout play earns <b>Saga Points</b>. Everything below is available to you as a member — all the slash commands reply privately, so only you see the result.</p>
+  </section>
+
+  <section id="cmds">
+    <div class="lbl">⌨️ <b>Your commands</b></div>
+    <div class="stack">
+
+      <div class="feat" style="--c:var(--blue)"><h3>📊 /rank <span class="badge">YOU</span></h3>
+        <dl>
+          <dt>Purpose</dt><dd>See the lifetime-XP leaderboard and your place on it.</dd>
+          <dt>How to use</dt><dd>Type <code>/rank</code> for the top 20 (your own row is always pinned at the bottom), or <code>/rank @player</code> to check someone else.</dd>
+          <dt>Example</dt><dd class="ex">/rank</dd>
+          <dt>Result</dt><dd>A private message with your level, total XP, rank, and a progress bar to your next level.</dd>
+          <dt>Notes</dt><dd>Only you see the reply. Works in any channel.</dd>
+        </dl>
+      </div>
+
+      <div class="feat" style="--c:var(--purple)"><h3>🏆 /saga <span class="badge">YOU</span></h3>
+        <dl>
+          <dt>Purpose</dt><dd>See the Saga Points leaderboard and your standing.</dd>
+          <dt>How to use</dt><dd><code>/saga</code> for the top 10 with your row pinned at the bottom, or <code>/saga @player</code> to check someone.</dd>
+          <dt>Example</dt><dd class="ex">/saga @Morveril</dd>
+          <dt>Result</dt><dd>A private leaderboard of Saga Points. You'll only show up once you've earned some.</dd>
+        </dl>
+      </div>
+
+      <div class="feat" style="--c:var(--indigo)"><h3>❓ /ask <span class="badge">TEAM CHANNELS</span></h3>
+        <dl>
+          <dt>Purpose</dt><dd>Get answers about what's going on without bugging a leader.</dd>
+          <dt>How to use</dt><dd><code>/ask &lt;your question&gt;</code> in a team channel. It pulls from the announcement threads — latest announcement, current objective, emergencies, or a full recap.</dd>
+          <dt>Example</dt><dd class="ex">/ask what's the latest announcement?</dd>
+          <dt>Result</dt><dd>A private answer based on the posted info. If it doesn't know, it'll tell you to ask a leader rather than make something up.</dd>
+        </dl>
+      </div>
+
+      <div class="feat" style="--c:var(--green)"><h3>📋 /roster &amp; /roster-search <span class="badge">TEAM CHANNELS</span></h3>
+        <dl>
+          <dt>Purpose</dt><dd>View the official roster or check if someone's on it.</dd>
+          <dt>How to use</dt><dd><code>/roster</code> shows the full list; <code>/roster-search &lt;name&gt;</code> finds one player (partial names work).</dd>
+          <dt>Example</dt><dd class="ex">/roster-search spy</dd>
+          <dt>Result</dt><dd>A private roster list, or a ✅/❌ telling you if the player was found.</dd>
+        </dl>
+      </div>
+
+      <div class="feat" style="--c:var(--cyan)"><h3>ℹ️ !commands <span class="badge">TEAM CHANNELS</span></h3>
+        <dl>
+          <dt>Purpose</dt><dd>A quick reminder of the commands you can use.</dd>
+          <dt>How to use</dt><dd>Type <code>!commands</code> in a team channel.</dd>
+          <dt>Result</dt><dd>A short, self-deleting list of your slash commands.</dd>
+        </dl>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="xp">
+    <div class="lbl">⭐ <b>XP &amp; levels</b></div>
+    <div class="stack">
+      <div class="feat" style="--c:var(--gold)"><h3>⭐ Earning XP <span class="badge">AUTOMATIC</span></h3>
+        <dl>
+          <dt>Purpose</dt><dd>Reward you for being active. XP never resets.</dd>
+          <dt>How to earn</dt><dd><b>Chatting:</b> 10 XP per message (max once a minute). <b>Reacting:</b> 5 XP per emoji reaction. <b>RSVPing</b> to an event: 25 XP (once per event).</dd>
+          <dt>Leveling</dt><dd>XP builds toward levels — quick early on, much harder past level 25 and again past 100.</dd>
+          <dt>Result</dt><dd>When you level up, the bot announces it right in the channel. Check your progress anytime with <code>/rank</code>.</dd>
+          <dt>Notes</dt><dd>The leaderboard channels themselves don't give XP.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="saga">
+    <div class="lbl">🏆 <b>Saga Points</b></div>
+    <div class="stack">
+      <div class="feat" style="--c:var(--purple)"><h3>🏆 The prestige track <span class="badge">PARTICIPATE</span></h3>
+        <dl>
+          <dt>Purpose</dt><dd>Recognize standout in-game performance — the community's prestige ranking.</dd>
+          <dt>How to earn</dt><dd>Play well in operations (pathing, siege MVP, final hit, and other objectives). Post your proof in the claims channel — confirmed achievements are added to your total.</dd>
+          <dt>Season rewards</dt><dd>Saga resets each season. When it does, the <b>top 10</b> earn lifetime-XP bonuses (the bigger your finish, the bigger the bonus).</dd>
+          <dt>Result</dt><dd>Your points show on the team leaderboard and via <code>/saga</code>.</dd>
+          <dt>Notes</dt><dd>Points are earned through real achievement — keep showing up and making plays.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="events">
+    <div class="lbl">📅 <b>Events &amp; RSVP</b></div>
+    <div class="stack">
+      <div class="feat" style="--c:var(--pink)"><h3>⏰ Event reminders &amp; RSVP <span class="badge">EVERYONE</span></h3>
+        <dl>
+          <dt>Purpose</dt><dd>Make sure you never miss a scheduled op, and show whether you're coming.</dd>
+          <dt>How to use</dt><dd>About an hour before a scheduled event, the bot posts a reminder with <b>✅ In</b>, <b>❌ Out</b>, and <b>❔ Maybe</b> buttons. Tap one to RSVP — tap a different one anytime to change your answer.</dd>
+          <dt>Example</dt><dd class="ex">Tap ✅ In on the reminder post</dd>
+          <dt>Result</dt><dd>The post updates live with who's In / Out / Maybe, and you earn <b>25 XP</b> for RSVPing (once per event).</dd>
+          <dt>Notes</dt><dd>No command needed — just watch for the reminder and tap a button.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="boards">
+    <div class="lbl">🏅 <b>Leaderboards</b></div>
+    <div class="stack">
+      <div class="feat" style="--c:var(--amber)"><h3>🏅 Live leaderboard channels <span class="badge">VIEW</span></h3>
+        <dl>
+          <dt>Purpose</dt><dd>See the standings any time without running a command.</dd>
+          <dt>How to use</dt><dd>Open the team leaderboard channel (Saga Points + Lifetime XP) or the chill-zone leaderboard (Lifetime XP).</dd>
+          <dt>Result</dt><dd>A pinned-style message the bot keeps updated automatically (refreshes every few minutes).</dd>
+          <dt>Notes</dt><dd>Want your personal rank with a progress bar? Use <code>/rank</code> or <code>/saga</code>.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="chill">
+    <div class="lbl">💬 <b>Chill zone</b></div>
+    <div class="stack">
+      <div class="feat" style="--c:var(--lime)"><h3>💬 Banter <span class="badge">JUST FOR FUN</span></h3>
+        <dl>
+          <dt>Purpose</dt><dd>Keep the chill channel lively.</dd>
+          <dt>How to use</dt><dd>Just hang out and chat in the chill-zone channel.</dd>
+          <dt>Result</dt><dd>Every so often the bot jumps in with a short, witty one-liner. No command, no setup — just vibes.</dd>
+          <dt>Notes</dt><dd>It's rate-limited, so it won't spam the channel.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <div class="nores" id="nores">No features match — try another word.</div>
+  <div class="foot">🎮 Onyx Bot · Team Member Guide · everything you need, nothing you don't.</div>
+</div>
+
+<script>
+  const q=document.getElementById('q');
+  const feats=[...document.querySelectorAll('.feat')];
+  const secs=[...document.querySelectorAll('section')];
+  const nores=document.getElementById('nores');
+  q.addEventListener('input',()=>{
+    const t=q.value.trim().toLowerCase(); let shown=0;
+    feats.forEach(f=>{const ok=!t||f.textContent.toLowerCase().includes(t);f.style.display=ok?'':'none';if(ok)shown++;});
+    secs.forEach(s=>{const hasCards=s.querySelector('.feat'); if(!hasCards)return;
+      const any=[...s.querySelectorAll('.feat')].some(e=>e.style.display!=='none'); s.style.display=(!t||any)?'':'none';});
+    nores.style.display=(t&&shown===0)?'block':'none';
+  });
+</script>
+</body>
+</html>
